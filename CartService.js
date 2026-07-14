@@ -4,11 +4,12 @@ class CartService {
         this.cart = [];
     }
 
-    tambahItem(item) {
-        // Aturan Diskon Member 10%
-        const hargaFinal = item.harga * 0.9;
+tambahItem(item) {
+        // Gabungan: Diskon member 10% kemudian potongan flat Rp 5.000
+        let hargaFinal = item.harga * 0.9;
+        hargaFinal = hargaFinal - 5000;
         this.cart.push({ ...item, harga: hargaFinal });
-        console.log("Item member berhasil ditambahkan dengan diskon 10%!");
+        console.log("Item berhasil ditambahkan dengan diskon member & potongan flat!");
     }
 }
 module.exports = CartService;

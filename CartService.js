@@ -4,10 +4,11 @@ class CartService {
         this.cart = [];
     }
 
-    tambahItem(item) {
-        // BARIS KONFLIK: Aturan harga akan ditulis di sini
-        this.cart.push(item); 
-        console.log("Item berhasil ditambahkan!");
+  tambahItem(item) {
+        // Aturan Potongan Flat Rp 5.000
+        const hargaFinal = item.harga - 5000;
+        this.cart.push({ ...item, harga: hargaFinal });
+        console.log("Item berhasil ditambahkan dengan potongan flat Rp 5.000!");
     }
 }
 module.exports = CartService;

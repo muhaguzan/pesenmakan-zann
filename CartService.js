@@ -4,10 +4,10 @@ class CartService {
         this.cart = [];
     }
 
-    tambahItem(item) {
-        // BARIS KONFLIK: Aturan harga akan ditulis di sini
-        this.cart.push(item); 
-        console.log("Item berhasil ditambahkan!");
+  tambahItem(item) {
+        // Aturan Diskon Member 10%
+        const hargaFinal = item.harga * 0.9;
+        this.cart.push({ ...item, harga: hargaFinal });
+        console.log("Item member berhasil ditambahkan dengan diskon 10%!");
     }
-}
 module.exports = CartService;

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PesenMakan - Katalog Kuliner Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-slate-900 min-h-screen p-6 md:p-12 bg-cover bg-center bg-no-repeat bg-fixed"
+    style="
+      background-image:
+        linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+        url(&quot;https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80&quot;);
+    "
+  >
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto mb-10 text-center md:text-left">
+      <h1 class="text-4xl font-extrabold text-amber-500 tracking-tight">
+        PesenMakan
+      </h1>
+
+      <p class="text-slate-300 mt-2 font-medium">
+        Platform Menu & Pemesanan Digital Terpercaya Di UNDIRA
+      </p>
+
+      <div class="h-1 w-20 bg-amber-500 mt-4 mx-auto md:mx-0"></div>
+    </header>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Daftar Menu Makanan -->
+      <div
+        class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-[200px]"
+      >
+        <!-- Menu 1 (Hero / Ukuran Besar) -->
+        <div
+          onclick="tambahKeKeranjang('Nasi Goreng Spesial', 28000)"
+          class="sm:col-span-2 sm:row-span-2 bg-slate-800 rounded-2xl overflow-hidden shadow-md group relative cursor-pointer"
+        >
+          <img
+            src="https://img.magnific.com/free-photo/american-shrimp-fried-rice-served-with-chili-fish-sauce-thai-food_1150-26576.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="Nasi Goreng Spesial"
+            class="absolute inset-0 object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 opacity-70"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent p-6 flex flex-col justify-end"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-amber-400"
+            >
+              Makanan Utama • Terlaris
+            </span>
+
+            <h3 class="text-2xl font-bold text-white mt-1">
+              Nasi Goreng Spesial
+            </h3>
+
+            <p class="text-emerald-400 font-semibold mt-1">Rp 28.000</p>
+          </div>
+        </div>
+
+        <!-- Menu 2 -->
+        <div
+          onclick="tambahKeKeranjang('Sate Ayam Madura', 25000)"
+          class="bg-slate-800 rounded-2xl overflow-hidden shadow-md group relative cursor-pointer"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/066/410/936/large_2x/close-up-sate-ayam-with-lontong-indonesian-satay-with-rice-cake-photo.jpg"
+            alt="Sate Ayam Madura"
+            class="absolute inset-0 object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 opacity-75"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-4 flex flex-col justify-end"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-amber-400"
+            >
+              Sate & Bakaran
+            </span>
+
+            <h3 class="text-sm font-bold text-white mt-1">Sate Ayam Madura</h3>
+
+            <p class="text-emerald-400 font-semibold">Rp 25.000</p>
+          </div>
+        </div>
+
+        <!-- Menu 3 -->
+        <div
+          onclick="tambahKeKeranjang('Bakso Sapi Urat', 22000)"
+          class="bg-slate-800 rounded-2xl overflow-hidden shadow-md group relative cursor-pointer"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/075/327/599/large_2x/close-up-of-indonesian-bakso-soup-with-smoke-photo.jpeg"
+            alt="Bakso Sapi Urat"
+            class="absolute inset-0 object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 opacity-75"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-4 flex flex-col justify-end"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-amber-400"
+            >
+              Sup & Kuah Hangat
+            </span>
+
+            <h3 class="text-sm font-bold text-white mt-1">Bakso Sapi Urat</h3>
+
+            <p class="text-emerald-400 font-semibold">Rp 22.000</p>
+          </div>
+        </div>
+
+        <!-- Menu 4 -->
+        <div
+          onclick="tambahKeKeranjang('Es Teh Manis Jumbo', 6000)"
+          class="sm:col-span-2 bg-slate-800 rounded-2xl overflow-hidden shadow-md group relative cursor-pointer"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/ES_TEH_MANIS.jpg"
+            alt="Es Teh Manis Jumbo"
+            class="absolute inset-0 object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 opacity-70"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/95 to-transparent p-4 flex flex-col justify-end"
+          >
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-amber-400"
+            >
+              Minuman Segar
+            </span>
+
+            <h3 class="text-md font-bold text-white mt-1">
+              Es Teh Manis Jumbo
+            </h3>
+
+            <p class="text-emerald-400 font-semibold">Rp 6.000</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keranjang Belanja -->
+      <div
+        class="bg-slate-800 rounded-2xl shadow-lg border border-slate-700 p-6 h-fit"
+      >
+        <h2
+          class="text-xl font-bold text-slate-100 border-b border-slate-700 pb-2 mb-4"
+        >
+          🛒 Keranjang Belanja
+        </h2>
+
+        <div
+          id="keranjang"
+          class="space-y-3 min-h-[160px] max-h-[320px] overflow-y-auto"
+        >
+          <p class="text-center text-slate-400 py-10">
+            Keranjang masih kosong.
+          </p>
+        </div>
+
+        <div class="border-t border-slate-700 pt-4 mt-4">
+          <div class="flex justify-between text-lg font-bold text-white">
+            <span>Total Tagihan</span>
+
+            <span id="totalHarga" class="text-amber-500">Rp 0</span>
+          </div>
+        </div>
+
+        <button
+          onclick="bayar()"
+          class="w-full mt-6 bg-amber-500 hover:bg-amber-600 transition text-slate-950 font-bold py-3 rounded-xl"
+        >
+          Proses Pesanan Sekarang
+        </button>
+      </div>
+    </main>
+
+    <script>
+      let keranjangBelanja = [];
+      let total = 0;
+
+      function tambahKeKeranjang(nama, harga) {
+        const itemAda = keranjangBelanja.find((item) => item.nama === nama);
+
+        if (itemAda) {
+          itemAda.jumlah++;
+        } else {
+          keranjangBelanja.push({
+            nama,
+            harga,
+            jumlah: 1,
+          });
+        }
+
+        updateTampilanStruk();
+      }
+
+      function updateTampilanStruk() {
+        const keranjang = document.getElementById("keranjang");
+        const totalHarga = document.getElementById("totalHarga");
+
+        keranjang.innerHTML = "";
+        total = 0;
+
+        if (keranjangBelanja.length === 0) {
+          keranjang.innerHTML = `
+            <p class="text-center text-slate-400 py-10">
+                Keranjang masih kosong.
+            </p>
+        `;
+
+          totalHarga.innerText = "Rp 0";
+          return;
+        }
+
+        keranjangBelanja.forEach((item, index) => {
+          const subtotal = item.harga * item.jumlah;
+
+          total += subtotal;
+
+          keranjang.innerHTML += `
+        <div class="flex justify-between items-center bg-slate-700 rounded-xl border border-slate-600 p-3">
+            <div>
+                <p class="font-semibold text-slate-100">
+                    ${item.nama}
+                </p>
+                <p class="text-xs text-slate-300">
+                    Rp ${item.harga.toLocaleString("id-ID")} × ${item.jumlah}
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="font-semibold text-amber-400">
+                    Rp ${subtotal.toLocaleString("id-ID")}
+                </span>
+                <button
+                    onclick="hapusItem(${index})"
+                    class="text-red-400 hover:text-red-500 font-bold">
+                    ✕
+                </button>
+            </div>
+        </div>
+        `;
+        });
+
+        totalHarga.innerText = "Rp " + total.toLocaleString("id-ID");
+      }
+
+      function hapusItem(index) {
+        keranjangBelanja.splice(index, 1);
+
+        updateTampilanStruk();
+      }
+
+      function bayar() {
+        if (keranjangBelanja.length === 0) {
+          alert("Keranjang masih kosong.");
+
+          return;
+        }
+
+        alert(
+          `Pesanan Berhasil Diproses!
+
+Total Tagihan :
+Rp ${total.toLocaleString("id-ID")}
+
+Pesanan Anda sedang disiapkan dapur. Terima kasih telah memesan di PesenMakan!`,
+        );
+
+        keranjangBelanja = [];
+
+        updateTampilanStruk();
+      }
+    </script>
+  </body>
+</html>
